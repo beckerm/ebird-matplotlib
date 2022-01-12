@@ -6,17 +6,20 @@ import matplotlib.pyplot as plt
 from matplotlib import rcParams
 import argparse
 
-png_filename = 'dark_eyed_junco.png'
+
 region_notation = ' - San Francisco Region'
 
 parser = argparse.ArgumentParser(
     description='eBird data plotting.')
 parser.add_argument(
     '-f', '--file', help='eBird data file.', required=True)
+parser.add_argument(
+    '-o', '--output', help='Output PNG file.', required=True)
 
 args = parser.parse_args()
 
 data_file = args.file
+png_filename = args.output
 
 
 rcParams.update({'figure.autolayout': True})
