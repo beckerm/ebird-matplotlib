@@ -1,1 +1,1 @@
-![Screenshot](dark_eyed_junco.png)
+![Screenshot](images/dark_eyed_junco.png)
