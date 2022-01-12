@@ -33,7 +33,9 @@ bird_name = df['COMMON NAME'].unique()
 df['OBSERVATION DATE'] = pd.to_datetime(
     df['OBSERVATION DATE'], format='%Y-%m-%d')
 
-filtered_df = df.loc[(df['OBSERVATION DATE'] >= '2010-01-01')]
+#filtered_df = df.loc[(df['OBSERVATION DATE'] >= '2010-01-01')]
+
+filtered_df = df[(df['OBSERVATION DATE'] >= '2010-01-01') & (df['OBSERVATION DATE'] <= '2020-12-31')]
 
 filtered_df_2 = filtered_df.copy()
 
